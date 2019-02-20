@@ -29,6 +29,19 @@ body{
 
 .imagen2marmaradr{
     @include centrarVerticalHorizontalmarmaradr();
+    display: block;
+}
+
+.enlace1marmaradr{    
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;    
+    .imagen4marmaradr{
+        width: 50%;
+        display: block;
+        margin: auto;        
+    }
 }
 
 .imagen3marmaradr{
