@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.containermarmaradr { 
+    display: grid; 
+    width: 90%;
+    grid-template-columns: 30vw auto;
+    margin: auto;
+    min-height: 100vh;
+} 
+
+@mixin centrarVerticalHorizontalmarmaradr(){
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 90%;    
+    max-height: 90%;    
+    object-fit: cover;
+}
+
+.imagen1marmaradr{
+    @include centrarVerticalHorizontalmarmaradr();
+}
+
+.imagen2marmaradr{
+    @include centrarVerticalHorizontalmarmaradr();
+}
+
+.imagen3marmaradr{
+    @include centrarVerticalHorizontalmarmaradr();
+}
+
+header, footer {     
+    grid-column: 1 / 3;  
+} 
+
+aside{
+    grid-column: 1 / 2;  
+    position: relative;
+}
+
+main{
+    grid-column: 2 / 3;  
+    overflow: auto; // Por si en resoluciones bajas no entra el texto.
+}
+
+header{
+    background-color: #005066;    
+    position: relative;
+}
+
+footer{
+    background-color: 	#4e7988;    
+    position: relative;
+}
+
+main{
+    background-color: #e4eff0;
+}
+
+aside{
+    background-color: #78cce2;
+}
+
+
+
+
+
+@media all and (max-width: 600px) { 
+    aside, main { 
+        grid-column: 1 / 3; 
+    } 
+}
+
+/*Estilos específicos y personalizables*/ 
+header, aside, main, footer { 
+    min-height: 25vh; 
+}
